@@ -1,0 +1,393 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>DJANGO TEST ECOMMERCE</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'endor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="">ecommerce</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li class="dropdown"><p><span>Account <i class="bi bi-chevron-down"></i></span></p>
+                    <ul>
+                        <!--@TODO ak eset ragacas chavsvavt tu shemosilia useri loging logout da ragacebs uchvnebs -->
+                        {% if user.is_authenticated %}
+                            <li><a href="#">Log out</a></li>
+                        {% else %}
+                            <li><a href="#">Log In</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+                <!--@TODO ak balanss ganvatavsebt da roca rames sheidzens daakldeba tavistavad -->
+                {% if user.is_authenticated %}
+                    <li><p>243$</p></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <!-- .navbar -->
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+        <h3>Welcome to <strong>Ecommerce</strong> website</h3>
+        <h1>We're foo</h1>
+        <h2>Some text foo Some text foo</h2>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About</h2>
+                <h3>Learn More <span>About Us</span></h3>
+                <p>The quick brown fox jumps over the lazy dog</p>
+            </div>
+
+            <div class="row content">
+                <p>
+                    The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick
+                    brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog
+                </p>
+                <br>
+                <br>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card" style="width: 19rem;">
+                        <a href="">
+                            <img src="{% static 'img/card1.jpg' %}" class="card-img-top" height="230" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 19rem;">
+                        <a href="">
+                            <img src="{% static 'img/card2.jpg' %}" class="card-img-top" height="230" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 19em;">
+                        <a href="">
+                            <img src="{% static 'img/card3.jpg' %}" class="card-img-top" height="230" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" style="width: 19rem;">
+                        <a href="">
+                            <img src="{% static 'img/card4.jpg' %}" class="card-img-top" height="230" alt="">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title"><span>Card title 4</span></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  |  -->
+
+    <section id="faq" class="faq">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>F.A.Q</h2>
+                <h3>Frequently Asked <span>Questions</span></h3>
+            </div>
+
+            <ul class="faq-list">
+
+                <li>
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">How to buy?<i
+                            class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Answer 1
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Question two<i class="bi bi-chevron-down icon-show"></i><i
+                                class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Answer 2
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Question three<i class="bi bi-chevron-down icon-show"></i><i
+                                class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            answer 3
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Question four<i class="bi bi-chevron-down icon-show"></i><i
+                                class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            answer 4
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Question five<i class="bi bi-chevron-down icon-show"></i><i
+                                class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Answer 5
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section><!-- End F.A.Q Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <h3>Contact <span>Us</span></h3>
+                <p>Some text</p>
+            </div>
+
+            <div>
+                <iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Tbilisi, Didi Dighomi&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+
+            <div class="row mt-5">
+
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Location:</h4>
+                            <p>Tbilisi, Didi Dighomi</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>giorgi.kordzakhia.2@btu.edu.ge</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Call:</h4>
+                            <p>+995 591 25 09 39</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 mt-5 mt-lg-0">
+
+                    <form action="" method="post" role="form" class="php-email-form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="name">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </label>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <label for="email">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="subject">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </label>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Ecommerce</h3>
+                    <p>
+                        A108 Adam Street <br>
+                        New York, NY 535022<br>
+                        United States <br><br>
+                        <strong>Phone:</strong> +1 5589 55488 55<br>
+                        <strong>Email:</strong> info@example.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">service1</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">service2</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">service3</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">service4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="" method="post">
+                        <label>
+                            <input type="email" name="email">
+                        </label>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+{#<script src="{% static 'vendor/php-email-form/validate.js' %}"></script>#}
+<script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
