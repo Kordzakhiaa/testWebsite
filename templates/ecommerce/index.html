@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="hero">
+        <div class="hero-container">
+            <h3>Welcome to <strong>Ecommerce</strong> website</h3>
+            <h1>We're foo</h1>
+            <h2>Some text foo Some text foo</h2>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>About</h2>
+                    <h3>Learn More <span>About Us</span></h3>
+                    <p>The quick brown fox jumps over the lazy dog</p>
+                </div>
+
+                <div class="row content">
+                    <p>
+                        The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick
+                        brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog
+                    </p>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 19rem;">
+                            <a href="">
+                                <img src="{% static 'img/card1.jpg' %}" class="card-img-top" height="230" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 1</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 19rem;">
+                            <a href="">
+                                <img src="{% static 'img/card2.jpg' %}" class="card-img-top" height="230" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 2</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 19em;">
+                            <a href="">
+                                <img src="{% static 'img/card3.jpg' %}" class="card-img-top" height="230" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title 3</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 19rem;">
+                            <a href="">
+                                <img src="{% static 'img/card4.jpg' %}" class="card-img-top" height="230" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><span>Card title 4</span></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  |  -->
+
+        <section id="faq" class="faq">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>F.A.Q</h2>
+                    <h3>Frequently Asked <span>Questions</span></h3>
+                </div>
+
+                <ul class="faq-list">
+
+                    <li>
+                        <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">How to buy?<i
+                                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Answer 1
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Question two<i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Answer 2
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Question three<i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                answer 3
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Question four<i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                answer 4
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Question five<i class="bi bi-chevron-down icon-show"></i><i
+                                    class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Answer 5
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section><!-- End F.A.Q Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <h3>Contact <span>Us</span></h3>
+                    <p>Some text</p>
+                </div>
+
+                <div>
+                    <iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Tbilisi, Didi Dighomi&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>Tbilisi, Didi Dighomi</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>giorgi.kordzakhia.2@btu.edu.ge</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+995 591 25 09 39</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form action="" method="post" role="form" class="php-email-form">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="name">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                    </label>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <label for="email">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="subject">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                </label>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label>
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                </label>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+{% endblock content %}

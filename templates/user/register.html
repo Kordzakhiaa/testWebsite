@@ -1,0 +1,17 @@
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<title>Login Page</title>
+<section id="bck">
+    <div class="bck-container">
+        <h1>Sign Up</h1>
+        <label>
+            <p>Email: <input type="email" name="username" placeholder="Username"></p>
+            <p>Password: <input type="password" name="password" placeholder="Password"></p>
+            <p>Confirm Password: <input type="password" name="confirm-password" placeholder="Confirm Password"></p>
+            <input type="submit" value="Sign Up">
+        </label>
+    </div>
+</section>
