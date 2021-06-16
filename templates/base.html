@@ -46,7 +46,7 @@
                     <ul>
                         <!--@TODO ak eset ragacas chavsvavt tu shemosilia useri loging logout da ragacebs uchvnebs -->
                         {% if user.is_authenticated %}
-                            <li><a href="#">Log out</a></li>
+                            <li><a href="{% url 'user:logout-view' %}">Log out</a></li>
                         {% else %}
                             <li><a href="{% url 'user:login-view' %}">Log In</a></li>
                             <li><a href="{% url 'user:register-view' %}">Sign Up</a></li>

@@ -8,9 +8,17 @@
     <div class="bck-container">
         <h1>Login</h1>
         <label>
-            <p>Email: <input type="email" name="username" placeholder="Username"></p>
-            <p>Password: <input type="password" name="password" placeholder="Password"></p>
-            <input type="submit" value="Log in">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Log in">
+            </form>
+{#            <p>Email: <input type="email" name="username" placeholder="Username"></p>#}
+{#            <p>Password: <input type="password" name="password" placeholder="Password"></p>#}
+{#            <input type="submit" value="Log in">#}
+            <br>
+            <br>
+            <p>You dont have an account? <a href="{% url 'user:register-view' %}">Sing Up</a></p>
         </label>
     </div>
 </section>
